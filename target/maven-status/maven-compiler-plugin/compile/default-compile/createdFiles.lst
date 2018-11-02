@@ -1,0 +1,4 @@
+com/pruebasRelacines/demo/DemoApplication.class
+com/pruebasRelacines/demo/module/repositorio/BibliotecaRepositorio.class
+com/pruebasRelacines/demo/module/controlador/BibliotecaControlador.class
+com/pruebasRelacines/demo/module/modelo/Biblioteca.class
