@@ -13,6 +13,17 @@ public class Biblioteca {
 
     private String nombre;
 
+    @OneToOne(mappedBy = "biblioteca")
+    private Direccion direccion;
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
     public Long getId() {
         return id;
     }
