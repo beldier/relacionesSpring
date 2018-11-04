@@ -1,11 +1,18 @@
 package com.pruebasRelacines.demo.module.modelo;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
+import javax.sql.rowset.serial.SerialArray;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "biblioteca")
-
-public class Biblioteca {
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")//esta anotacion es la que evita el infinite recursion en relaciones bidireccionales
+public class Biblioteca  {
     @Id
     @Column(name = "id")//se debe especificar cuando nombreVariable != nombreColumna
     @GeneratedValue(strategy=GenerationType.IDENTITY)
